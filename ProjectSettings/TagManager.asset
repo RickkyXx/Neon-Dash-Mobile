@@ -15,11 +15,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Destroy
   - Water
   - UI
   - Lines
-  - 
+  - Die
   - DynamicObjects
   - LightingHidden
   - PostProcessing
