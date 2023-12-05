@@ -5,19 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Destroy : MonoBehaviour
 {
-    public EdgeCollider2D edgeCollider;
-
-    private void Update()
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (!IsCarInsideCollider())
+        // Check if the collider leaving the line has the "Player" tag
+        if (collision.collider.CompareTag("Player"))
         {
-            Destroy(edgeCollider.gameObject);
+            // Destroy the Line (or the GameObject containing the EdgeCollider2D)
+            Destroy(gameObject);
         }
-    }
-    bool IsCarInsideCollider()
-    {
-        Vector2 carPosition = transform.position;
-
-        return edgeCollider.OverlapPoint(carPosition);
     }
 }
