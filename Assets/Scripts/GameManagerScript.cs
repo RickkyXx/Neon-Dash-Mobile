@@ -41,7 +41,7 @@ public class GameManagerScript : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync(0);
     }
 
     public void quit()
